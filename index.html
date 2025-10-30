@@ -213,13 +213,26 @@
       <div class="heart">💌</div>
       <h1>生日快乐</h1>
       <p class="subtitle">
-        亲爱的陈宝，你有一封特别的祝福邮件<br />点击下方按钮，打开属于你的惊喜 ✨
+        亲爱的陈宝，你有一封特别的祝福邮件<br />点击下方按钮，打开属于你的惊喜
+        ✨
       </p>
       <button class="button" onclick="startSurprise()">确认</button>
     </div>
 
     <script>
       const messages = [
+        // 新增的祝福句子
+        "烦恼烦恼都消失❤️❤️",
+        "每天都要开开心心哦❤️❤️",
+        "晚安❤️❤️",
+        "早安❤️❤️",
+        "保持好心情❤️❤️",
+        "喜欢喜欢就是喜欢❤️❤️",
+        "金榜题名顺顺利利❤️❤️",
+        "当然，别忘记想我哦！❤️❤️",
+        "吃饭没呀❤️❤️",
+        "午安❤️❤️",
+        // 原有内容
         "我想你了！❤️❤️",
         "我好想你~❤️❤️",
         "也有好好吃饭❤️❤️",
@@ -266,7 +279,7 @@
       ];
 
       let popupCount = 0;
-      const maxPopups = 50;
+      const maxPopups = 100;
 
       function createSparkle(x, y) {
         const sparkle = document.createElement("div");
@@ -321,7 +334,7 @@
       function createPopupsSequentially(count) {
         if (count > 0) {
           showPopup();
-          setTimeout(() => createPopupsSequentially(count - 1), 100);
+          setTimeout(() => createPopupsSequentially(count - 1), 60);
         }
       }
 
@@ -345,4 +358,3 @@
     </script>
   </body>
 </html>
-
